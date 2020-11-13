@@ -46,7 +46,7 @@ Template adapted from [Gilles Louppe](https://github.com/glouppe/talk-template).
 
 ## Notebooks
 
-The following tutorial notebookss are available:
+The following tutorial notebooks are available:
 
 | Name | Short description | Binder |
 | --- | --- | --- |
