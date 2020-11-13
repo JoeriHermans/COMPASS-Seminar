@@ -34,7 +34,11 @@ you@localhost:~ $ pip install -r requirements.txt
 
 ## Slides
 
-TODO
+The slides can be viewed by starting an HTTP server to serve the slides at [localhost:8000](http://localhost:8000).
+```console
+you@localhost:~ $ python -m http.server --directory slides 8000
+```
+Alternatively, you can also view the slides in a [`pdf`](slides/slides.pdf) format or [online](https://joerihermans.com/slides/talk-compass-tutorial).
 
 #### Credits
 
