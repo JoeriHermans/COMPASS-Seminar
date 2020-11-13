@@ -48,8 +48,8 @@ class: middle
 ### **Proposal**: Train a *discriminator* $d(x,\theta)$ with inputs $x$ and $\theta$
 .center[.width-60[![](figures/ratio-estimator.png)]]
 ### to distinguish between samples from:
-- the *dependent* joint $p(x,\theta)$ (class 1),
-- and the *independent* joint $p(x)p(\theta)$ (class 0).
+- the *joint* $p(x,\theta)$ (class 1),
+- and the *product of marginals* $p(x)p(\theta)$ (class 0).
 ---
 class: middle
 You can show that the decision function of the optimal classifier yields
