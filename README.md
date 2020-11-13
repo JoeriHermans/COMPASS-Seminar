@@ -13,14 +13,18 @@ A tutorial on Amortised Approximate Ratio Estimation for the COMPASS Seminar Ser
 
 > **Required**. The project assumes you have a working Anaconda installation.
 
-In order to execute this project, you need at least `40 GB` of available storage space. We do not recommend to run the simulations on a single machine, as this would take about *60 years* to complete. On a HPC cluster, the simulations will take about 2-3 weeks. Training all ratio estimators will take 1-2 days depending on the availability of GPU's. Diagnostics another day.
-
-### Installation of the Anaconda environment
+Anaconda can be installed by executing the following commands in your terminal.
+Please note the commands below are intended for a Linux installation.
+For other operating systems please check the Anaconda [website](https://www.anaconda.com/products/individual).
 
 ```console
 you@localhost:~ $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 you@localhost:~ $ sh Miniconda3-latest-Linux-x86_64.sh
 ```
+
+### Setup of the environment
+
+
 
 ## Slides
 
