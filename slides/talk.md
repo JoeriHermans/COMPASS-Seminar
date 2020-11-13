@@ -1,7 +1,7 @@
 class: title-slide
 count: false
 
-# Likelihood-free MCMC with Amortized Approximate Likelihood-Ratios
+# Simulation-based inference with Amortised Approximate Ratio Estimators
 
 .small[**Joeri Hermans$^1$**, Volodimir Begy$^2$, Gilles Louppe$^1$]
 <br>

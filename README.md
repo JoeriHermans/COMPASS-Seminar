@@ -46,4 +46,8 @@ Template adapted from [Gilles Louppe](https://github.com/glouppe/talk-template).
 
 ## Notebooks
 
-TODO
+The following tutorial notebookss are available:
+
+| Name | Short description | Render | Binder |
+| --- | --- | --- | --- |
+| [notebooks/01_introduction.ipynb](notebooks/01_introduction.ipynb) | Introduction notebook | [[view]](notebooks/01_introduction.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoeriHermans/constraining-dark-matter-with-stellar-streams-and-ml/master?filepath=notebooks%2F01_overview.ipynb) |
