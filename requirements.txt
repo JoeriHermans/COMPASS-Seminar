@@ -1,0 +1,23 @@
+certifi==2020.11.8
+corner==2.1.0
+cycler==0.10.0
+dataclasses==0.6
+future==0.18.2
+hypothesis @ git+https://github.com/montefiore-ai/hypothesis.git@f6e3a8ec002eac367fab72005ae5c755c7b491d7
+joblib==0.17.0
+kiwisolver==1.3.1
+matplotlib==3.3.3
+numpy==1.19.4
+pandas==1.1.4
+Pillow==8.0.1
+pyparsing==2.4.7
+python-dateutil==2.8.1
+pytz==2020.4
+scikit-learn==0.23.2
+scipy==1.5.4
+setuptools-scm==4.1.2
+six==1.15.0
+sklearn==0.0
+threadpoolctl==2.1.0
+torch==1.7.0
+typing-extensions==3.7.4.3

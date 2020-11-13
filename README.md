@@ -22,9 +22,13 @@ you@localhost:~ $ wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Lin
 you@localhost:~ $ sh Miniconda3-latest-Linux-x86_64.sh
 ```
 
-### Setup of the environment
+After your Anaconda installation has been installed, we can create a `compass-tutorial` environment with the required packages:
 
-
+```console
+you@localhost:~ $ conda create -n compass-tutorial python=3.8
+you@localhost:~ $ conda activate compass-tutorial
+you@localhost:~ $ pip install -r requirements.txt
+```
 
 ## Slides
 
