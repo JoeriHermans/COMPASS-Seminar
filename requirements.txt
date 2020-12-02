@@ -71,3 +71,5 @@ typing-extensions==3.7.4.3
 wcwidth==0.2.5
 webencodings==0.5.1
 widgetsnbextension==3.5.1
+pygame==2.0.0
+pymunk==5.7.0
