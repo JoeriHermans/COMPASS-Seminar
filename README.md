@@ -1,8 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoeriHermans/constraining-dark-matter-with-stellar-streams-and-ml/master?filepath=notebooks%2F01_overview.ipynb)
-
-> Work in progress!
-
-A tutorial on Amortised Approximate Ratio Estimation for the COMPASS Seminar Series at the University of Bristol.
+A tutorial on Amortised Approximate Ratio Estimation (AALR) for the COMPASS Seminar Series at the University of Bristol.
 
 ## Table of contents
 
@@ -48,6 +44,6 @@ Template adapted from [Gilles Louppe](https://github.com/glouppe/talk-template).
 
 The following tutorial notebooks are available:
 
-| Name | Short description | Binder |
+| Name | Short description |
 | --- | --- | --- |
-| [01_introduction.ipynb](notebooks/01_introduction.ipynb) | Introduction notebook | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoeriHermans/constraining-dark-matter-with-stellar-streams-and-ml/master?filepath=notebooks%2F01_overview.ipynb) |
+| [01_introduction.ipynb](notebooks/introduction.ipynb) | Introduction notebook |

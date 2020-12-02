@@ -1,21 +1,25 @@
 class: title-slide
 count: false
 
-# Simulation-based inference with Amortised Approximate Ratio Estimators
+# Simulation-based inference with Amortised Approximate Density Ratio Estimators
 
-.small[**Joeri Hermans$^1$**, Volodimir Begy$^2$, Gilles Louppe$^1$]
-<br>
-<br>
-.smallest[$^1$University of Liège, Belgium]<br>
-.smallest[$^2$University of Vienna, Austria]
+.small[An introductory tutorial]
 ---
 class: middle
 
-.center.width-100[![](./figures/lfi-setup2.png)]
-<br><br>
-.center[Inference in this context requires **likelihood-free algorithms**.]
+.center[[github.com/JoeriHermans/COMPASS-Seminar/tutorial/tutorial.ipynb](https://github.com/JoeriHermans/COMPASS-Seminar/tutorial/tutorial.ipynb)]
+---
+class: middle
 
-.footnote[Credits: Johann Brehmer.]
+### Application
+## Towards constraining warm dark matter with neural simulation-based inference
+<br><br><br>
+[arxiv.org/abs/2011.14923](https://arxiv.org/abs/2011.14923)
+---
+class: middle
+
+# Quick recap!
+
 ---
 class: middle
 
@@ -69,55 +73,75 @@ $$
 $$
 .center[.width-50[![](figures/ratio-estimator.png)]]
 ---
+class: middle
+
+## .red[<h3>Complete Deep Learning toolbox can be applied to statistical inference, and therefore used to infer properties* of our Universe!</h3>]
+
+.footnote[Under some assumed model]
+---
 class: middle,center,no-side-padding
 
-<h2>.red[<h3>Complete Deep Learning toolbox can be applied to inference!]</h2>
----
-## Quality of the approximation $\hat{r}(x\vert\theta)$
-Consider the identity
-$$
-p(x)\frac{p(x\vert\theta)}{p(x)} = p(x\vert\theta).
-$$
-The ratio estimator should satisfy $p(x)\hat{r}(x\vert\theta) = p(x\vert\theta)$, else it's .red[**wrong**].
-### .red[Intractable, but we can sample from these densities!] $\rightarrow$ AUC $\approx$ 0.5
-.center[.width-70[![](figures/roc.png)]]
-.footnote[Inspired by 1506.02169, alternative diagnostic SBC 1804.06788]
----
-## Likelihood-free MCMC
+.width-100[![](figures/cdm-wdm.jpg)]
+<br>
+## Particle mass in $\mathcal{O}(\text{GeV})$ (CDM) vs. $\mathcal{O}(\text{keV})$ (WDM) range
 
-MCMC samplers require the evaluation of the posterior ratios:
-$$
-\begin{aligned}
-\frac{p(\theta\_\text{new}|x)}{p(\theta\_{t-1}|x)} &= \frac{p(x|\theta\_\text{new}) p(\theta\_\text{new}) / p(x)}{p(x|\theta\_{t-1}) p(\theta\_{t-1}) / p(x)} \\\\
-&= \frac{r(x\vert\theta\_\text{new})}{r(x\vert\theta\_{t-1})}\frac{p(\theta\_\text{new})}{p(\theta\_{t-1})}.
-\end{aligned}
-$$
-
-Extensions with HMC is possible since $\nabla\_\theta \log p(x\vert\theta) = \Large\frac{\nabla\_\theta~r(x\vert\theta)}{r(x\vert\theta)}$.
-
-.width-100[![](figures/aalr-mcmc.png)]
 ---
-## Amortization and simulation efficiency
-<br><br>
-.width-100[![](figures/efficiency.png)]
+.width-100[![](figures/andromeda.png)]
+.footnote[Credit: Martin, et al. (2013). The PAndAS view of the Andromeda satellite system. I. A Bayesian search for dwarf galaxies using spatial and color-magnitude information. The Astrophysical Journal, 776(2), 80.]
+---
+<video width="100%" style="position: relative; top: -25px;" autoplay controls loop><source src="figures/pal5-impacts.webm">Your browser does not support video.</video>
+.footnote[Credit: Erkal, et al. (2017). A sharper view of Pal 5's tails: discovery of stream perturbations with a novel non-parametric technique. Monthly Notices of the Royal Astronomical Society, 470(1), 60-84.]
+---
+class: center,middle,no-side-padding
+
+.width-100[![](figures/streams.png)]
 ---
 class: middle
 
-## Off-the-shelf neural architectures
+.width-100[![](figures/gd1.png)]
+Distant passage from galactic center $\rightarrow$ "neglegible" baryonic pertubations
+## **GD-1 gaps are a good probe for DM substructures!**
 <br>
-.center[.width-80[![](figures/radius.png)]]
-.center[.width-70[![](figures/population.png)]]
-.footnote[Lensing simulations by https://github.com/Jammy2211/PyAutoLens]
+.footnote[Credit: Bonaca, A., Hogg, D. W., Price-Whelan, A. M., & Conroy, C. (2019). The Spur and the Gap in GD-1: Dynamical evidence for a dark substructure in the Milky Way halo. The Astrophysical Journal, 880(1), 38.]
+---
+class: middle
+
+# How?
+
+Simple, just like we did in the tutorial!
+
+1. Define a prior $p(\vartheta)$ over $m_\text{wdm}$.
+2. Draw samples from the joint $p(\vartheta, x)$ (a training and testing dataset).
+3. Train several ratio estimators (for ensembling).
+4. Compute posteriors.
 
 ---
-## Conclusion
+class: middle, center
 
-- We presented an inference pipeline based on a new ratio estimator.
-- All advances in Deep Learning can easily applied in this methodology.
-- Quality of the approximation can be probed with a diagnostic.
-- Posterior samples can be drawn with this ratio estimator.
-- Demonstrated on realistic problems with high dimensional observations.
+.width-80[![](figures/result.png)]
+---
+class: middle
+.center[# **Problem!**]
+<br><br>
+## Are the approximations trustworthy?
+---
+## Does the mode converge to $\vartheta^*$ for i.i.d. observables?
 
+In other words, compute $p(\vartheta\vert\mathcal{X})$ with $\mathcal{X} = \\{x\sim p(x\vert\vartheta^*), ...\\}$.
+
+.center[![bias-test](https://raw.githubusercontent.com/JoeriHermans/constraining-dark-matter-with-stellar-streams-and-ml/master/.github/posteriors.gif)]
+---
+## **Coverage** at various confidence level?
+
+.center[.width-80[![](figures/coverage.png)]]
+---
+class: middle, center
+
+.width-100[![](figures/main-result.png)]
+---
+class: middle
+
+.center[Always interested in helping out!]
 <br><br>
 .center[.red[Try for yourself!]]
 <center><h2>github.com/montefiore-ai/hypothesis</h2></center>
