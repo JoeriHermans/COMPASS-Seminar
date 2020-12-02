@@ -34,7 +34,7 @@ The slides can be viewed by starting an HTTP server to serve the slides at [loca
 ```console
 you@localhost:~ $ python -m http.server --directory slides 8000
 ```
-Alternatively, you can also view the slides in a [`pdf`](slides/slides.pdf) format or [online](https://joerihermans.com/talks/talk-compass-tutorial).
+Alternatively, you can also view the slides [online](https://joerihermans.com/talks/talk-compass-tutorial).
 
 #### Credits
 
