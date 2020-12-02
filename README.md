@@ -45,5 +45,5 @@ Template adapted from [Gilles Louppe](https://github.com/glouppe/talk-template).
 The following tutorial notebooks are available:
 
 | Name | Short description |
-| --- | --- | --- |
+| --- | --- |
 | [01_introduction.ipynb](notebooks/introduction.ipynb) | Introduction notebook |
