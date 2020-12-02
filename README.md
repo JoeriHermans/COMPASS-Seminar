@@ -46,4 +46,4 @@ The following tutorial notebooks are available:
 
 | Name | Short description |
 | --- | --- |
-| [01_introduction.ipynb](notebooks/introduction.ipynb) | Introduction notebook |
+| [tutorial.ipynb](tutorial/tutorial.ipynb) | Introduction notebook |
