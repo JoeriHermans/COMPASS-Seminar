@@ -7,7 +7,7 @@ count: false
 ---
 class: middle
 
-.center[[github.com/JoeriHermans/COMPASS-Seminar/tutorial/tutorial.ipynb](https://github.com/JoeriHermans/COMPASS-Seminar/tutorial/tutorial.ipynb)]
+.center[[tutorial/tutorial.ipynb](https://github.com/JoeriHermans/COMPASS-Seminar/blob/master/tutorial/tutorial.ipynb)]
 ---
 class: middle
 
@@ -131,7 +131,7 @@ In other words, compute $p(\vartheta\vert\mathcal{X})$ with $\mathcal{X} = \\{x\
 
 .center[![bias-test](https://raw.githubusercontent.com/JoeriHermans/constraining-dark-matter-with-stellar-streams-and-ml/master/.github/posteriors.gif)]
 ---
-## **Coverage** at various confidence level?
+## **Coverage** at various confidence levels?
 
 .center[.width-80[![](figures/coverage.png)]]
 ---
